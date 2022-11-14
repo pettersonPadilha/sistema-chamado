@@ -6,16 +6,24 @@ export default function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("olaaa")
+  }
+
   return(
     <div className="container-center">
         <div className="login">
-            <div className="logo-area">
+            <div className="login-area">
                 <img src={logo} alt="logo"/>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1>Entrar</h1>
-                <input type="text" placeholder="Digite seu email"/>
-                <input type="password" placeholder="Digite sua senha"/>
+                <input type="text" placeholder="Digite seu email" value={email} 
+                onChange={(e) => setEmail(e.target.value)}/>
+                <input type="password" placeholder="Digite sua senha" value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
                 <button type="submit">Acessar</button>
             </form>
             <Link to="/register">Criar uma conta</Link>
