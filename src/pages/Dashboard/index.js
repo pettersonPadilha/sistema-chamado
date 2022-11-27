@@ -7,8 +7,6 @@ export default function Dashboard() {
         <div>
             <h1>Pagina Dashboard</h1>
             <button onClick={() => signOut()}>Sair</button>
-          
-            
         </div>
     );
 }

@@ -23,7 +23,7 @@ export default function AuthProvider({children}) {
         loadStore();
             
     },[])
-
+    // Cadastrando novo usuario
     async function signUp(email,password,nome) {
         setLoadingAuth(true);
         await firebase.auth().createUserWithEmailAndPassword(email,password)
